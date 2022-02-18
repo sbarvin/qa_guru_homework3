@@ -9,6 +9,7 @@ public class TestData {
     Faker faker = new Faker();
     Random rand = new Random();
 
+    String headerTitle = "Student Registration Form";
     String firstName = faker.name().firstName();
     String lastName = faker.name().lastName();
     String userEmail = faker.internet().emailAddress();
@@ -34,5 +35,7 @@ public class TestData {
     String state = "NCR";
     String[] cityItems = new String[] {"Delhi", "Noida"};
     String city = cityItems[rand.nextInt(cityItems.length)];
+
+    String resultModalTitle = "Thanks for submitting the form";
 
 }

@@ -14,7 +14,7 @@ public class RegistrationForm extends TestBase {
 
         registrationFormPage
                 .openPage()
-                .checkHeaderTitle("Student Registration Form")
+                .checkHeaderTitle(testData.headerTitle)
                 .setFirstName(testData.firstName)
                 .setLastName(testData.lastName)
                 .setUserEmail(testData.userEmail)
@@ -28,7 +28,7 @@ public class RegistrationForm extends TestBase {
                 .setState(testData.state)
                 .setCity(testData.city)
                 .sendForm()
-                .checkResultModalTitle("Thanks for submitting the form")
+                .checkResultModalTitle(testData.resultModalTitle)
                 .checkResultModalTable("Student Name", testData.firstName + " " + testData.lastName)
                 .checkResultModalTable("Student Email", testData.userEmail)
                 .checkResultModalTable("Gender", testData.gender)
